@@ -7,10 +7,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<style type="text/css">
-
-
-    </style>    
+	<link rel="stylesheet" type="text/css" href="pagestyle.css" /> 
 </head>
 
 <body>
@@ -18,8 +15,15 @@
 	<p id="text">Some text</p>
 	
 	<script type="text/javascript">
-	
-		alert(document.getElementById("text").innerHTML);
+		
+		// This is a comment
+		
+		/*
+		This is a comment block
+		It wont be processed
+		*/
+		
+		document.getElementById("text").innerHTML="Some more text";
 	
 	</script>
 	
@@ -31,9 +35,10 @@
 	<h2>Useful/Related Instructions in html:</h2>
 	<p class="Lucida">document.getElementById();</p>
 	<p class="Lucida">alert(document.getElementById("text").innerHTML);</p>
+	<p class="Lucida">document.getElementById("text").innerHTML="Some more text";</p>
 	
 	<hr />
-	<p><a href="index.html">Back to Learn CSS Homepage</a></p>
+	<p><a href="index.html">Back to Learning Javascript Homepage</a></p>
 	
 	<br /><br />
 	
