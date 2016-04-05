@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning CSS</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--internal way of doing style, better-->
+	<style type="text/css">
+	.large{
+		font-size: 300%;
+	}
+	
+	.underline{
+		text-decoration: underline;
+	}
+	
+	.bold{
+		font-weight: bold;
+	}
+	
+	#green{
+		color: green;
+	}
+	
+	.purplebox{
+		background-color: #DF01D7;
+		width: 600px;
+		padding:10px 100px;
+	}
+	
+	.redbox{
+		background-color: red;
+		width: 300px;
+		height: 200px;
+	}
+	
+	
+	.clear{
+		clear:both;
+	}
+	
+	p{
+		padding: 0;
+		margin: 0;
+	}
+   
+    </style>    
+</head>
+
+<body>
+<div class="purplebox">
+    <h1>Class vs. ID</h1>
+	<!--Webpage notes-->
+	<p><h2>Classes</h2>Classes are a way to organize paragraph that can be used
+		to tag multiple paragraphs.</p>
+	<p><h2>IDs</h2>ID's can only be used once in a page</p>
+</div>
+<div class="redbox">
+    <p class="large">Some text</p>
+</div>
+
+<div class = "clear">
+</div>
+
+<div>
+	<p id="green" class="large">This is more text</p>
+	<p>The thrid <span class="underline large bold">word</span> in this paragraph is underlined</p>
+    
+</div>
+
+</body>
+</html>

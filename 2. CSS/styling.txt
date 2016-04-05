@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning CSS</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<style type="text/css">
+		
+		.Arial{
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		.ComicSans{
+			font-family:"Comic Sans MS", cursive, sans-serif;
+		}
+		.Lucida{
+			font-family:"Lucida Console", Monaco, monospace;
+		}
+		.block{
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		.bold{
+			font-weight:bold;
+		}
+		.italic{
+			font-style:italic;
+		}
+		.green{
+			color:green;
+		}
+		.underline{
+			text-decoration:underline;
+		}
+		.largeFont{
+			font-size:200%;
+		}
+		table{
+			font-family:"Lucida Console", Monaco, monospace;
+		}
+		
+    </style>    
+</head>
+
+<body>
+	<h1>Lecture 60 - Further Styling Text</h1>
+	
+	<h2>Adding styles</h2>
+	<p class="block">This is some text</p>
+	<p class="green bold block">This is some bolded green text</p>
+	<p class="italic block">This is some italic <span class="underline">underlined text</span></p>
+	<p class="largeFont bold block">This is some large bold text</p>
+	
+	<hr />
+	<h2>Useful/Related Instructions in html:</h2>
+	
+	<table>
+		<tr>	<td>Set Weight:</td>					<td>font-weight:bold;</td>												</tr>
+		<tr>	<td>Set Font:</td>						<td>font-style:italic;</td>												</tr>
+		<tr>	<td>Set Color:</td>						<td>color:green;</td>													</tr>
+		<tr>	<td>Set Underline:</td>					<td>text-decoration:underline;</td>										</tr>
+		<tr>	<td>Set inline style:</td>				<td>&ltspan class = "some_class"&gt some_text &lt/span&gt </td> 		</tr>
+		<tr>	<td>Set Relative Font Size:</td>		<td>font-size:200%;</td>												</tr>
+	</table>
+	
+	<hr />
+	
+
+	<p><a href="index.html">Back to Learn CSS Homepage</a></p>
+	
+	<br /><br />
+	
+	<p>Source Code:</p>
+	<div>
+		<iframe src="styling.txt" width="1000" height="400"/>
+	</div>
+	
+</body>
+</html>
