@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning CSS</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" type="text/css" href="pagestyle.css" /> 
+</head>
+
+<body>
+	<!--Main Title-->
+	<h1>Responding to Clicks</h1>
+
+
+	<button id="myButton">You know you want to click me...</button>
+	
+	<script type="text/javascript">
+		
+		document.getElementById("myButton").onclick=function(){
+
+			alert("HI!");
+
+		}
+	
+	</script>
+	
+	
+	
+	
+	<!--Begin standard page ending code-->
+	<hr />
+	<h2>Useful/Related Instructions in html:</h2>
+	<p>Execute function upon clicking button: <span class="Lucida">document.getElementById("[id]").onclick=function{...};</span></p>
+
+	
+	<hr />
+	<p><a href="index.html">Back to Learning Javascript Homepage</a></p>
+	
+	<br /><br />
+	
+	<p>Source Code:</p>
+	<div>
+		<iframe src="resondingtoclick.txt" width="600" height="400"/>
+	</div>
+	
+	<!--End Standard Page Ending Code-->
+	
+</body>
+</html>
