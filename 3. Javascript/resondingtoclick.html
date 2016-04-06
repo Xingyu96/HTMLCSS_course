@@ -16,24 +16,43 @@
 
 
 	<button id="textChanger">This button changes first div text.</button>
+	<button id="popup">This button opens a popup with a message</button>
+	<button id="textAppender"> This button appends some text</button>
+	<button id="creator">This button creates some text</button>
+
 
 	<div id="firstDiv">This is some text</div>
+	<div id="secondDiv">Javascript is...</div>
+	<div id="emptyDiv"></div>
 
-	<button id="popup">This button opens a popup with a message</button>
+
 	
 	<script type="text/javascript">
 		
 		//button that modifies div text
 		document.getElementById("textChanger").onclick=function(){
-			
+
 			document.getElementById("firstDiv").innerHTML="This is now different!";
-		
 		}
 
 		//button that creates a popup
 		document.getElementById("popup").onclick=function(){
 
 			alert("HI!");
+		}
+
+		//button that appends some text
+		document.getElementById("textAppender").onclick=function(){
+
+			document.getElementById("secondDiv").innerHTML = document.getElementById("secondDiv").innerHTML + "great!";
+			
+		}
+
+		//button that creates some text
+		document.getElementById("creator").onclick=function(){
+
+			document.getElementById("emptyDiv").innerHTML = "<ul><li>Cat</li><li>Dog</li></ul>";
+
 		}
 	
 	</script>

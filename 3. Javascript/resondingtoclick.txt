@@ -15,13 +15,43 @@
 	<h1>Responding to Clicks</h1>
 
 
-	<button id="myButton">You know you want to click me...</button>
+	<button id="textChanger">This button changes first div text.</button>
+	<button id="popup">This button opens a popup with a message</button>
+	<button id="textAppender"> This button appends some text</button>
+	<button id="creator">This button creates some text</button>
+
+
+	<div id="firstDiv">This is some text</div>
+	<div id="secondDiv">Javascript is...</div>
+	<div id="emptyDiv"></div>
+
+
 	
 	<script type="text/javascript">
 		
-		document.getElementById("myButton").onclick=function(){
+		//button that modifies div text
+		document.getElementById("textChanger").onclick=function(){
+
+			document.getElementById("firstDiv").innerHTML="This is now different!";
+		}
+
+		//button that creates a popup
+		document.getElementById("popup").onclick=function(){
 
 			alert("HI!");
+		}
+
+		//button that appends some text
+		document.getElementById("textAppender").onclick=function(){
+
+			document.getElementById("secondDiv").innerHTML = document.getElementById("secondDiv").innerHTML + "great!";
+			
+		}
+
+		//button that creates some text
+		document.getElementById("creator").onclick=function(){
+
+			document.getElementById("emptyDiv").innerHTML = "<ul><li>Cat</li><li>Dog</li></ul>";
 
 		}
 	
@@ -34,6 +64,7 @@
 	<hr />
 	<h2>Useful/Related Instructions in html:</h2>
 	<p>Execute function upon clicking button: <span class="Lucida">document.getElementById("[id]").onclick=function{...};</span></p>
+	<p>Change html text: <span class="Lucida">document.getElementById("[id]").innerHTML="[string]";</span></p>
 
 	
 	<hr />

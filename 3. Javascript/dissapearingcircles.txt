@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <title>Dissapearing Circles</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" type="text/css" href="pagestyle.css" /> 
+
+	<style type="text/css">
+
+	.block{
+		width: 100px;
+		height: 100px;
+		visibility: visible;
+	}
+	.red{
+		border-radius: 50px;
+		background-color: red;
+	}
+
+	</style>
+</head>
+
+<body>
+	<!--Main Title-->
+	<h1>Dissapearing Circles</h1>
+
+
+	<button id="changeCircle">Make circle appear/dissapear</button>
+
+	<br /><br />
+
+	<div id="circle" class="red block"></div>
+
+	
+	<script type="text/javascript">
+		var state = false;
+		document.getElementById("changeCircle").onclick = function(){
+			state = !state;
+
+			document.getElementById("circle").style.visibility = state ? "hidden" : "visible";
+
+		}
+
+		
+
+	
+	</script>
+	
+	
+	
+	
+	<!--Begin standard page ending code-->
+	<hr />
+	<h2>Useful/Related Instructions in html:</h2>
+	<p>Change style: <span class="Lucida">[element].style.[attribute] = ...;</span></p>
+
+
+	
+	<hr />
+	<p><a href="index.html">Back to Learning Javascript Homepage</a></p>
+	
+	<br /><br />
+	
+	<p>Source Code:</p>
+	<div>
+		<iframe src="dissapearingcircles.txt" width="600" height="400"/>
+	</div>
+	
+	<!--End Standard Page Ending Code-->
+	
+</body>
+</html>
