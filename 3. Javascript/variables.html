@@ -1,15 +1,16 @@
 <!doctype html>
 <html>
 <head>
-    <title>Dissapearing Circles</title>
+	<!--Page Title-->
+    <title>Variables</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<link rel="stylesheet" type="text/css" href="pagestyle.css" /> 
-
 	<style type="text/css">
+
 
 	.block{
 		width: 100px;
@@ -26,28 +27,30 @@
 
 <body>
 	<!--Main Title-->
-	<h1>Dissapearing Circles</h1>
+	<h1>Learning about Variables</h1>
+
+	<input id="myInput" type="text" value="text"/>
+
+	<button id="stylesChanger"> Change the text! </button>
+
+	<div id="firstDiv">This is some text</div>
 
 
-	<button id="changeCircle">Make circle appear/dissapear</button>
 
-	<br /><br />
 
-	<div id="circle" class="red block"></div>
 
 	
-	<script type="text/javascript">
-		var state = false;
-		document.getElementById("changeCircle").onclick = function(){
-			state = !state;
 
-			document.getElementById("circle").style.visibility = state ? "hidden" : "visible";
+	<script type="text/javascript">
+
+		var newText =document.getElementById("myInput").value;
+
+		document.getElementById("stylesChanger").onclick=function() {
+
+			newText = document.getElementById("myInput").value;
+			document.getElementById("firstDiv").innerHTML=newText;
 
 		}
-
-		
-
-	
 	</script>
 	
 	
