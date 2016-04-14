@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!--Page Title-->
-    <title>Variables</title>
+    <title>If Statements</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -27,30 +27,12 @@
 
 <body>
 	<!--Main Title-->
-	<h1>Learning about Variables</h1>
-
-	<input id="myInput" type="text" value="text"/>
-
-	<button id="stylesChanger"> Change the text! </button>
-
-	<div id="firstDiv">This is some text</div>
-
-
-
-
-
-	
+	<h1>If Statements</h1>
 
 	<script type="text/javascript">
 
-		var newText =document.getElementById("myInput").value;
+		var x = 1;
 
-		document.getElementById("stylesChanger").onclick=function() {
-
-			newText = document.getElementById("myInput").value;
-			document.getElementById("firstDiv").innerHTML=newText;
-
-		}
 	</script>
 	
 	
@@ -58,11 +40,11 @@
 	
 	<!--Begin standard page ending code-->
 	<hr />
+
 	<h2>Useful/Related Instructions in html:</h2>
-	<p>Change style: <span class="Lucida">[element].style.[attribute] = ...;</span></p>
+	<p>Declare new Array: <span class="Lucida">var myArray = new Array();</span></p>
 
 
-	
 	<hr />
 	<p><a href="index.html">Back to Learning Javascript Homepage</a></p>
 	
@@ -70,7 +52,7 @@
 	
 	<p>Source Code:</p>
 	<div>
-		<iframe src="dissapearingcircles.txt" width="600" height="400"/>
+		<iframe src="if.txt" width="600" height="400"/>
 	</div>
 	
 	<!--End Standard Page Ending Code-->

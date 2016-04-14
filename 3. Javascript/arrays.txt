@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<!--Page Title-->
+    <title>Arrays</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" type="text/css" href="pagestyle.css" /> 
+	<style type="text/css">
+
+
+	.block{
+		width: 100px;
+		height: 100px;
+		visibility: visible;
+	}
+	.red{
+		border-radius: 50px;
+		background-color: red;
+	}
+
+	</style>
+</head>
+
+<body>
+	<!--Main Title-->
+	<h1>Learning about Arrays</h1>
+
+	<button id="stylesChanger"> Change the text! </button>
+
+	<div id="firstDiv">This is some text</div>
+
+
+
+
+
+
+	<script type="text/javascript">
+
+		var myArray = new Array();
+		myArray[0] = "pizza";
+		myArray[1] = "john";
+		console.log(myArray);
+
+		var myOtherArray = ["rain", "sunshine"];
+		myOtherArray.push("snow");
+		console.log(myOtherArray);
+		myOtherArray.splice(2,0,"hail", "cloudy");
+		//myOtherArray.splice(1,2);
+		console.log(myOtherArray);
+
+		document.getElementById("stylesChanger").onclick=function() {
+
+			document.getElementById("firstDiv").innerHTML = myArray[0];
+
+		}
+
+	</script>
+	
+	
+	
+	
+	<!--Begin standard page ending code-->
+	<hr />
+
+	<h2>Useful/Related Instructions in html:</h2>
+	<p>Declare new Array: <span class="Lucida">var myArray = new Array();</span></p>
+	<p>Set array items directly: <span class="Lucida">myOtherArray = ["rain", "sunshine"];</span></p>
+	<p>Add Element to Array: <span class="Lucida">myOtherArray.push("snow");</span></p>
+	<p>Remove element from Array: <span class="Lucida">myOtherArray.splice(1,2);</span></p>
+	<p>Use splice() to insert element(s): <span class="Lucida">myOtherArray.splice(2,0,"hail", "cloudy");</span></p>
+	<p>Display info on console: <span class="Lucida">console.log(myArray);</span></p>
+
+
+	<hr />
+	<p><a href="index.html">Back to Learning Javascript Homepage</a></p>
+	
+	<br /><br />
+	
+	<p>Source Code:</p>
+	<div>
+		<iframe src="arrays.txt" width="600" height="400"/>
+	</div>
+	
+	<!--End Standard Page Ending Code-->
+	
+</body>
+</html>
