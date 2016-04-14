@@ -29,15 +29,27 @@
 	<!--Main Title-->
 	<h1>Guess How Many Fingers?</h1>
 
-
-
-
-
+	<input id="input"/>
+	<button id="submit">Submit</button>
 
 
 	<script type="text/javascript">
-		var x = Math.random() * 5;
-		x = Math.floor(x);
+
+		var input = document.getElementById("input").value;
+
+		document.getElementById("submit").onclick = function(){
+
+			var x = Math.random() * 5;
+
+			x = Math.floor(x);
+
+			if(x == input){
+				alert("You've guessed right!");
+			} else{
+				alert("Guess again! The actual anwer was " + x);
+			}
+
+		}
 
 
 
