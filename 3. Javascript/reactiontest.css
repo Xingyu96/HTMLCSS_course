@@ -1,0 +1,16 @@
+	.block{
+		width: 100px;
+		height: 100px;
+		visibility: visible;
+	}
+	.red{
+		border-radius: 50px;
+		background-color: red;
+	}
+
+	#box1{
+		border-radius: 50px;
+		width: 100px;
+		height: 100px;
+		background-color:red;
+	}
