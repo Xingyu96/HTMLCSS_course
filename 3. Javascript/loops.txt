@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<!--Page Title-->
+    <title>Guess How Many Fingers?</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" type="text/css" href="pagestyle.css" /> 
+	<style type="text/css">
+
+
+	.block{
+		width: 100px;
+		height: 100px;
+		visibility: visible;
+	}
+	.red{
+		border-radius: 50px;
+		background-color: red;
+	}
+
+	</style>
+</head>
+
+<body>
+	<!--Main Title-->
+	<h1>Guess How Many Fingers?</h1>
+
+	<input id="input"/>
+	<button id="submit">Submit</button>
+
+
+	<script type="text/javascript">
+
+		var input = document.getElementById("input").value;
+
+		document.getElementById("submit").onclick = function(){
+
+			var x = Math.random() * 5;
+
+			x = Math.floor(x);
+
+			if(x == input){
+				alert("You've guessed right!");
+			} else{
+				alert("Guess again! The actual anwer was " + x);
+			}
+
+		}
+
+
+
+	</script>
+	
+
+
+	<hr />
+	<p><a href="index.html">Back to Learning Javascript Homepage</a></p>
+	
+	<br /><br />
+	
+	<p>Source Code:</p>
+	<div>
+		<iframe src="if.txt" width="600" height="400"/>
+	</div>
+	
+	<!--End Standard Page Ending Code-->
+	
+</body>
+</html>

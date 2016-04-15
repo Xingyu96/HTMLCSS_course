@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<!--Page Title-->
+    <title>Loops</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" type="text/css" href="pagestyle.css" /> 
+	<style type="text/css">
+
+
+	.block{
+		width: 100px;
+		height: 100px;
+		visibility: visible;
+	}
+	.red{
+		border-radius: 50px;
+		background-color: red;
+	}
+
+	</style>
+</head>
+
+<body>
+	<!--Main Title-->
+	<h1>Loops</h1>
+
+	<p id = "arrayString"></p>
+
+	<input id="input"/>
+	<button id="submit">Submit</button>
+
+
+	<script type="text/javascript">
+
+		var myArray = ["pizza", "hamburger", "sushi"];
+		var arrayString = "";
+
+		for(var i = 0; i < myArray.length; i++){
+			alert(myArray[i]);
+			arrayString += (" " + myArray[i]);
+		}
+		document.getElementById("arrayString").innerHTML = arrayString;
+
+
+
+	</script>
+	
+
+
+	<hr />
+	<p><a href="index.html">Back to Learning Javascript Homepage</a></p>
+	
+	<br /><br />
+	
+	<p>Source Code:</p>
+	<div>
+		<iframe src="if.txt" width="600" height="400"/>
+	</div>
+	
+	<!--End Standard Page Ending Code-->
+	
+</body>
+</html>
