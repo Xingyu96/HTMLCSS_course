@@ -18,24 +18,38 @@
 <body>
 	<!--Main Title-->
 	<h1>Reaction Test</h1>
-
+	<p>Your Time: <span id = "time"></span></p>
 	<div id = "box1"></div>
 
 
 
+
 	<script type="text/javascript">
+		var create = 0; var click = 0; var reactionTime = 0;
 
 		makeBox();
 		
+
 		document.getElementById("box1").onclick = function(){
+
+			click = Date.now();
+
 			this.style.display = "none";
 			makeBox();
+
+			reactionTime = (click - create) / 1000;
+			document.getElementById("time").innerHTML = reactionTime;
+
 		}
 
 		function makeBox(){
+			
 			setTimeout(function(){
 			document.getElementById("box1").style.display = "block";
+			create = Date.now();
 			}, Math.random()*5000);
+
+			
 		}
 
 
