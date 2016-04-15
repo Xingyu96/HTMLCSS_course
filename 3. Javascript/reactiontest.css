@@ -9,8 +9,8 @@
 	}
 
 	#box1{
-		border-radius: 50px;
-		width: 100px;
+		border-radius: 10px;
+		width: 200px;
 		height: 100px;
 		background-color:red;
 	}
