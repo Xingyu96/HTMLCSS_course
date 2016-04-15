@@ -29,7 +29,6 @@
 
 		makeBox();
 		
-
 		document.getElementById("box1").onclick = function(){
 
 			click = Date.now();
@@ -44,12 +43,30 @@
 
 		function makeBox(){
 			
+			var object = document.getElementById("box1");
 			setTimeout(function(){
-			document.getElementById("box1").style.display = "block";
-			create = Date.now();
-			}, Math.random()*5000);
+				if(Math.random()> .5)
+					object.style.borderRadius = "50px";
+				else object.style.borderRadius = "0px";
 
+				object.style.display = "block";
+				object.style.backgroundColor = getRandomColor();
+
+				object.style.marginTop = Math.random() * 200 + "px";
+				object.style.marginLeft = Math.random() * 900 + "px";
+
+				create = Date.now();
 			
+			}, Math.random()*5000);
+		}
+
+		function getRandomColor(){
+			var letter = '01234556789ABCDEF'.split('');
+			var color = '#';
+			for (var i = 0; i < 6; i++){
+				color += letter[Math.round(Math.random() * 15)];
+			}
+			return color;
 		}
 
 

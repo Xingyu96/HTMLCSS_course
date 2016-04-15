@@ -10,8 +10,13 @@
 
 	#box1{
 		border-radius: 10px;
-		width: 200px;
+		width: 100px;
 		height: 100px;
 		background-color:red;
 		display: none;
+		margin: 0;
+	}
+
+	body{
+		font-family: Verdana, Geneva, sans-serif;
 	}
