@@ -25,9 +25,20 @@
 
 	<script type="text/javascript">
 
+		makeBox();
+		
 		document.getElementById("box1").onclick = function(){
-			this.style.visibility = "hidden";
+			this.style.display = "none";
+			makeBox();
 		}
+
+		function makeBox(){
+			setTimeout(function(){
+			document.getElementById("box1").style.display = "block";
+			}, Math.random()*5000);
+		}
+
+
 
 
 	</script>
