@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning jQuery</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--internal way of doing style, better-->
+    <link rel="stylesheet" type="text/css" href="index.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+</head>
+
+<body>
+
+	<h1>Learning jQuery</h1>
+	
+	<div class="square" style="background-color: green;"></div>
+	<div class="square" style="background-color: green;"></div>
+	<div class="circle" style="background-color: red;"></div>
+	<div class="clear"></div>
+
+	<p>This is some text</p>
+	<iframe style="height: 400px; width: 600px;" src="http://www.ubc.ca"></iframe>
+
+	<script>
+
+		$(".circle").hover(function(){
+			$("p").html("changed! haha!");
+		})
+
+		$("div").click(function(){
+			alert($(this).css("width"));
+		})
+
+
+	</script>
+
+	<hr />
+
+	<h2>Example Code from excercises</h2>
+
+	<p><a href="index.html">Internal Javascript</a></p>
+
+
+</body>
+
+
+</html>
