@@ -24,17 +24,41 @@
 	<iframe style="height: 400px; width: 600px;" src="http://www.ubc.ca"></iframe>
 
 	<button id ="triggerText">Make this text magically dissapear</button>
+	<button id ="fadeIn">Make the text magically appear</button>
+
 	<p id="magicText">There once was this little town located just outside the shadows of the snowy Alps. In the Summertime, brick-red roof tiles reflected much of the townpeople's worries back towards the warm Sun above. You could see the faint summer heat rising from the treaded, winding gravel road that cut throught the lavender fields, leading to the town's entrance -- a stone arch bridge crossing the quiet river that hugged the town from three sides.</p>
 
 
 	<script>
+	// 	var visible = true;
 
-		$(".circle").click(function(){
-			$(".square").fadeOut();
-		})
-		$("#triggerText").click(function(){
-			$("#magicText").fadeOut();
-		})
+	// 	$(".circle").click(function(){
+	// 		$(".square").fadeOut(fucntion(){
+	// 			alert("fade out complete");
+	// 		});
+	// 	})
+	// 	if(visible){
+	// 	$("#triggerText").click(function(){
+	// 		$("#magicText").fadeOut();
+	// 		visible = false;
+	// 	});
+	// }
+	// 	else if (!visible){
+	// 		$("#triggerText").click(function(){
+	// 		$("#magicText").fadeIn();
+	// 		visible = true;
+	// 	});
+	// 	}
+
+	$(".circle").click(fucntion(){
+		// $(this).animate({
+		// 	width:"300px",
+		// 	height:"300px",
+		// 	borderRadius:"150px"
+		// 	},1500);
+		$(this).fadeOut();
+		});
+
 
 
 	</script>
