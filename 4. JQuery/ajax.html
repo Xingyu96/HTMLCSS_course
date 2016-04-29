@@ -19,7 +19,11 @@
 
 	<script>
 
-	$(".circle").cli
+		$.ajax({
+			url:"index.html"
+		}).done(function(data){
+			alert(data);
+		});
 
 	</script>
 
