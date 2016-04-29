@@ -49,7 +49,7 @@
 	<form id="validation">
 
 		<label for="email">Email</label>
-		<input name="email" />
+		<input name="email" id="email"/>
 
 		<label for="phone">Telephone</label>
 		<input name="phone" />
@@ -68,12 +68,26 @@
 
 
 
-<scrpit>
+<script>
+
+	$("#validation").submit(function(event){
+
+		event.preventDefault();
+		
+		function validateEmail($email) {
+ 			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  			return emailReg.test( $email );
+		};
+
+		if(!validateEmail($("#email").val())){
+			alert("not valid");
+		}
 
 
+	});
 
 
-</scrpit>
+</script>
 	
 </body>
 </html>
