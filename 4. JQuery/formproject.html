@@ -10,18 +10,21 @@
 	<style>
 		#wrapper{
 			margin: 0 auto;
-			width: 500px;
+			width: 600px;
 			padding: 10px;
 			font-family: helvetica;
 			font-size: 1.2em;
-			border: solid;
+		}
+		#submitbutton{
+			height: 50px;
+			width: 100px;
+			margin-left: 200px;
 		}
 
 		label{
-			width: 150px;
+			width: 200px;
 			float: left;
-			padding-top: 5px;
-			border: solid;
+			padding-top: 8px;
 		}
 
 		input {
@@ -43,26 +46,25 @@
 
 <div id = "wrapper">
 
+	<form id="validation">
 
-	<label for="email">Email</label>
-	<input name="email" />
+		<label for="email">Email</label>
+		<input name="email" />
 
-	<label for="phone">Telephone</label>
-	<input name="phone" />
+		<label for="phone">Telephone</label>
+		<input name="phone" />
 
-	<label for="password">Password</label>
-	<input type="password" name="password" />
+		<label for="password">Password</label>
+		<input type="password" name="password" />
 
-	<label for="password">Confirm Password</label>
-	<input type="password" name="password" />
+		<label for="password">Confirm Password</label>
+		<input type="password" name="password" />
+
+		<input id ="submitbutton" type="submit" value="Submit"/>
+
+	</form>
 
 </div>
-
-
-
-
-
-
 
 
 
