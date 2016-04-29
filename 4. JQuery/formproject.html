@@ -8,7 +8,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<style>
+		#wrapper{
+			margin: 0 auto;
+			width: 500px;
+			padding: 10px;
+			font-family: helvetica;
+			font-size: 1.2em;
+			border: solid;
+		}
 
+		label{
+			width: 150px;
+			float: left;
+			padding-top: 5px;
+			border: solid;
+		}
+
+		input {
+			float: left;
+			width: 300px;
+			height: 20px;
+			padding: 10px;
+			font-size: 1.2em;
+			border: 1px solid gray;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
 
 	</style>
 
@@ -16,6 +41,22 @@
 
 <body>
 
+<div id = "wrapper">
+
+
+	<label for="email">Email</label>
+	<input name="email" />
+
+	<label for="phone">Telephone</label>
+	<input name="phone" />
+
+	<label for="password">Password</label>
+	<input type="password" name="password" />
+
+	<label for="password">Confirm Password</label>
+	<input type="password" name="password" />
+
+</div>
 
 
 
