@@ -17,6 +17,7 @@
 	body{
 		margin: 0;
 		padding: 0;
+		background-color: #20001A;
 	}
 	#topbar{
 		float: left;
@@ -26,42 +27,120 @@
 		color: white;
 		font-family: Verdana;
 		height: 50px;
+		border-bottom: solid 2px white;
+
 	}
 	#title{
 		margin: 5px 0 0 5px;
 		float: left;
 	}
-	#topbutton{
-		margin-top: 10px;
+	#runButton{
+		float:right;
+		padding: 5px 10px 0 0;
+	}
+	#run{
+		font-size: 0.8em;
+	}
+	#buttonlist{
+		width: 220px;
+		margin: 0 auto;
+		list-style: none;
+		border: solid 2px white;
+		border-radius: 5px;
+		height: 28px;
+		padding-left: 3px;
+		position: relative;
+		top: 7px;
 
 	}
-	button{
+	#buttonlist li{
 		float: left;
+		font-size: 0.75em;
+		border-right: solid 2px white;
+		padding: 3px 6px 3px 6px ;
 	}
+	#run{
+		border-radius: 5px;
+		border: solid 2px white;
+		background-color: #00000A;
+		color: white;
+		padding-bottom: 2px;
+	}
+
+	.clear{
+		clear: both;
+	}
+
+	.codecontainer{
+		height: 100%;
+		width: 50%;
+		background-color: gray;
+	}
+	.codecontainer textarea{
+		width: 100%;
+		height: 100%;
+		border: none;
+		background-color: #20001A;
+		border-right: solid 2px white;
+		border-top: none;
+		color: white;
+		padding: 2px 2px 0px 5px;
+	}
+
 
 
 	</style>
 </head>
 
 <body>
-<div id="topbar">
-	<div id="title">
-		CodePlayer
+
+<div id="wrapper">
+	<div id="topbar">
+		<div id="title">
+			CodePlayer
+		</div>
+
+		<div id="runButton">
+			<button id="run">Run</button>
+		</div>
+
+		<ul id="buttonlist">
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JS</li>
+			<li style="border: none; padding-right: 3px">Result</li>
+
+		</ul>
+
+
 	</div>
-	<div id="topbutton">
-		<button>HTML</button>
-		<button>CSS</button>
-		<button>JS</button>
-		<button>Result</button>
+	<div class="clear"></div>
+
+	<div class="codecontainer" id="htmlcontainer">
+		<textarea>
+			Example
+		</textarea>
+	</div>
+	<div class="codecontainer" id="csscontainer">
+	</div>
+	<div class="codecontainer" id="jscontainer">
+	</div>
+	<div class="codecontainer" id="resultcontainer">
 	</div>
 
-	<button id="run">Run</button>
 
+
+	</div>
 </div>
 	
 
 
 	<script>
+		var windowHeight = $(window).height();
+		var menubarHeight = $("#topbar").height();
+		var containerHeight = windowHeight - menubarHeight;
+
+		$(".codecontainer").height(containerHeight+"px");
 
 
 
