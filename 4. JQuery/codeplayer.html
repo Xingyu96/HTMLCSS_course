@@ -23,7 +23,7 @@
 		float: left;
 		font-size: 1.5em;
 		width:100%;
-		background-color: black;
+		background-color: #264ca4;
 		color: white;
 		font-family: Verdana;
 		height: 50px;
@@ -40,6 +40,11 @@
 	}
 	#run{
 		font-size: 0.8em;
+		border-radius: 5px;
+		border: solid 2px white;
+		background-color: #f5af23;
+		color: white;
+		padding-bottom: 2px;
 	}
 	#buttonlist{
 		width: 220px;
@@ -59,13 +64,7 @@
 		border-right: solid 2px white;
 		padding: 3px 6px 3px 6px ;
 	}
-	#run{
-		border-radius: 5px;
-		border: solid 2px white;
-		background-color: #00000A;
-		color: white;
-		padding-bottom: 2px;
-	}
+
 
 	.clear{
 		clear: both;
@@ -74,16 +73,16 @@
 	.codecontainer{
 		height: 100%;
 		width: 50%;
-		background-color: gray;
 	}
 	.codecontainer textarea{
 		width: 100%;
 		height: 100%;
 		border: none;
-		background-color: #20001A;
+		background-color: #004d4d;
 		border-right: solid 2px white;
 		border-top: none;
 		color: white;
+		margin: 0;
 		padding: 2px 2px 0px 5px;
 	}
 
@@ -141,6 +140,8 @@
 		var containerHeight = windowHeight - menubarHeight;
 
 		$(".codecontainer").height(containerHeight+"px");
+
+
 
 
 
