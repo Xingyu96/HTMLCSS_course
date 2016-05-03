@@ -66,6 +66,16 @@
 		padding: 3px 6px 3px 6px ;
 	}
 
+	#csscontainer, #jscontainer{
+		display: none;
+	}
+
+	#result{
+		height: 100%;
+		position: relative;
+		border: none;
+		left: 20px;
+	}
 
 	.clear{
 		clear: both;
@@ -127,6 +137,7 @@
 
 
 	</div>
+	
 	<div class="clear"></div>
 
 	<div class="codecontainer" id="htmlcontainer">
@@ -136,7 +147,7 @@
 		</textarea>
 	</div>
 	<div class="codecontainer" id="csscontainer">
-		<div class="containertag">CSS/div>
+		<div class="containertag">CSS</div>
 		<textarea>
 
 		</textarea>
@@ -149,14 +160,12 @@
 	</div>
 	<div class="codecontainer" id="resultcontainer">
 		<div class="containertag">Result</div>
-		<textarea>
+		<iframe id="result">
 
-		</textarea>
+		</iframe>
 	</div>
 
 
-
-	</div>
 </div>
 	
 
