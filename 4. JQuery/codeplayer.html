@@ -17,7 +17,7 @@
 	body{
 		margin: 0;
 		padding: 0;
-		background-color: #20001A;
+		background-color: #004d4d;
 	}
 	#topbar{
 		float: left;
@@ -56,6 +56,7 @@
 		padding-left: 3px;
 		position: relative;
 		top: 7px;
+		background-color: #d06004;
 
 	}
 	#buttonlist li{
@@ -73,6 +74,8 @@
 	.codecontainer{
 		height: 100%;
 		width: 50%;
+		position: relative;
+
 	}
 	.codecontainer textarea{
 		width: 100%;
@@ -84,6 +87,17 @@
 		color: white;
 		margin: 0;
 		padding: 2px 2px 0px 5px;
+		font-family: "Lucida Console", Monaco, monospace;
+	}
+	.containertag{
+		position:absolute;
+		right:10px;
+		top:10px;
+		color: white;
+		font-family: verdana;
+/*		background-color: #ffffff;
+		opacity: 0.5;
+   		filter: alpha(opacity=60);*/
 	}
 
 
@@ -116,15 +130,28 @@
 	<div class="clear"></div>
 
 	<div class="codecontainer" id="htmlcontainer">
+		<div class="containertag">HTML</div>
 		<textarea>
-			Example lllloooooooollllls
+
 		</textarea>
 	</div>
 	<div class="codecontainer" id="csscontainer">
+		<div class="containertag">CSS/div>
+		<textarea>
+
+		</textarea>
 	</div>
 	<div class="codecontainer" id="jscontainer">
+		<div class="containertag">JS</div>
+		<textarea>
+
+		</textarea>
 	</div>
 	<div class="codecontainer" id="resultcontainer">
+		<div class="containertag">Result</div>
+		<textarea>
+
+		</textarea>
 	</div>
 
 
