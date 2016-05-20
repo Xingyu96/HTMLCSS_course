@@ -47,7 +47,7 @@
 		padding-bottom: 2px;
 	}
 	#buttonlist{
-		width: 193px;
+		width: 165px;
 		margin: 0 auto;
 		list-style: none;
 		border: solid 2px white;
@@ -87,7 +87,7 @@
 
 	.codecontainer{
 		height: 100%;
-		width: 50%;
+/*		width: 33%;*/
 		position: relative;
 		float: left;
 
@@ -142,10 +142,9 @@
 		</div>
 
 		<ul id="buttonlist">
-			<li class="toggle">HTML</li>
-			<li class="toggle">CSS</li>
-			<li class="toggle">JS</li>
-			<li class="toggle" style="border: none; padding-right: 3px">Result</li>
+			<li class="toggle selected">HTML</li>
+			<li class="toggle selected">CSS</li>
+			<li class="toggle selected" style="border: none; padding-right: 3px">Result</li>
 
 		</ul>
 
@@ -156,27 +155,17 @@
 
 	<div class="codecontainer" id="HTMLcontainer">
 		<div class="containertag">HTML</div>
-		<textarea>
-
-		</textarea>
+		<textarea id="htmlcode"></textarea>
 	</div>
 	<div class="codecontainer" id="CSScontainer">
 		<div class="containertag">CSS</div>
-		<textarea>
-
-		</textarea>
+		<textarea id="csscode"></textarea>
 	</div>
-	<div class="codecontainer" id="JScontainer">
-		<div class="containertag">JS</div>
-		<textarea>
 
-		</textarea>
-	</div>
+
 	<div class="codecontainer" id="Resultcontainer">
 		<div class="containertag">Result</div>
-		<iframe id="result">
-
-		</iframe>
+		<iframe id="result"></iframe>
 	</div>
 
 
@@ -190,6 +179,7 @@
 		var containerHeight = windowHeight - menubarHeight;
 
 		$(".codecontainer").height(containerHeight+"px");
+		$(".codecontainer").css("width", 100/3 + "%");
 
 		$(".toggle").click(function(){
 			//toggle selected class on/off
@@ -213,10 +203,10 @@
 
 		$("#runButton").click(function(){
 
-			$("iframe").contents().find("html").html("test");
+			$("iframe").contents().find("html").html('<style>'+$("#csscode").val() + '</style>' + $("#htmlcode").val());
 		})
 
-
+		//TODO: add tab support
 
 
 
