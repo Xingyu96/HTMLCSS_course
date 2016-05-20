@@ -47,23 +47,24 @@
 		padding-bottom: 2px;
 	}
 	#buttonlist{
-		width: 220px;
+		width: 193px;
 		margin: 0 auto;
 		list-style: none;
 		border: solid 2px white;
 		border-radius: 5px;
 		height: 28px;
-		padding-left: 3px;
 		position: relative;
 		top: 7px;
 		background-color: #d06004;
+		padding: 0;
 
 	}
 	#buttonlist li{
+
 		float: left;
 		font-size: 0.75em;
 		border-right: solid 2px white;
-		padding: 3px 6px 3px 6px ;
+		padding: 3px;
 	}
 
 	#csscontainer, #jscontainer{
@@ -75,6 +76,9 @@
 		position: relative;
 		left: 13px;
 		border: none;
+		top: 10px;
+		color:white;
+		font-family: "Lucida Console", Monaco, monospace;
 	}
 
 	.clear{
@@ -97,8 +101,9 @@
 		border-top: none;
 		color: white;
 		margin: 0;
-		padding: 2px 2px 0px 5px;
+		padding: 10px 2px 0px 5px;
 		font-family: "Lucida Console", Monaco, monospace;
+		box-sizing: border-box;
 	}
 	.containertag{
 		position:absolute;
@@ -106,9 +111,17 @@
 		top:10px;
 		color: white;
 		font-family: verdana;
+		border: solid 1px white;
+		border-radius: 2px;
 /*		background-color: #ffffff;
 		opacity: 0.5;
    		filter: alpha(opacity=60);*/
+	}
+	.toggle{
+
+	}
+	.selected{
+		background-color: #803A00;
 	}
 
 
@@ -129,10 +142,10 @@
 		</div>
 
 		<ul id="buttonlist">
-			<li>HTML</li>
-			<li>CSS</li>
-			<li>JS</li>
-			<li style="border: none; padding-right: 3px">Result</li>
+			<li class="toggle">HTML</li>
+			<li class="toggle">CSS</li>
+			<li class="toggle">JS</li>
+			<li class="toggle" style="border: none; padding-right: 3px">Result</li>
 
 		</ul>
 
@@ -141,25 +154,25 @@
 
 	<div class="clear"></div>
 
-	<div class="codecontainer" id="htmlcontainer">
+	<div class="codecontainer" id="HTMLcontainer">
 		<div class="containertag">HTML</div>
 		<textarea>
 
 		</textarea>
 	</div>
-	<div class="codecontainer" id="csscontainer">
+	<div class="codecontainer" id="CSScontainer">
 		<div class="containertag">CSS</div>
 		<textarea>
 
 		</textarea>
 	</div>
-	<div class="codecontainer" id="jscontainer">
+	<div class="codecontainer" id="JScontainer">
 		<div class="containertag">JS</div>
 		<textarea>
 
 		</textarea>
 	</div>
-	<div class="codecontainer" id="resultcontainer">
+	<div class="codecontainer" id="Resultcontainer">
 		<div class="containertag">Result</div>
 		<iframe id="result">
 
@@ -177,6 +190,31 @@
 		var containerHeight = windowHeight - menubarHeight;
 
 		$(".codecontainer").height(containerHeight+"px");
+
+		$(".toggle").click(function(){
+			//toggle selected class on/off
+			$(this).toggleClass("selected");
+
+			var activeDiv=$(this).html();
+
+			$("#" + activeDiv + "container").toggle();
+
+					var showingDivs=$(".codecontainer").filter(function(){
+			return($(this).css("display") != "none");
+			}).length;
+
+
+			var container_width = 100 / showingDivs;
+
+			$(".codecontainer").css("width", container_width + "%");
+
+
+		});
+
+		$("#runButton").click(function(){
+
+			$("iframe").contents().find("html").html("test");
+		})
 
 
 
